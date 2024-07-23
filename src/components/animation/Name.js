@@ -4,7 +4,6 @@ import { OrbitControls, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 
 const TexturedMesh = ({ onClick }) => {
-  const [cameraPosition, setCameraPosition] = useState([0, 20, 0]);
   const texture = useTexture('/Images/1299888.png'); // Load texture here
   return (
     <>
@@ -44,7 +43,7 @@ const RotatingIcosahedron = () => {
 };
 
 const Name = () => {
-  
+  const [cameraPosition, setCameraPosition] = useState([0, 20, 0]);
 
   return (
     <Canvas
@@ -55,6 +54,7 @@ const Name = () => {
       <directionalLight color="red" position={[0, 0, 20]} shadow={true} />
       <RotatingIcosahedron />
       <TexturedMesh onClick={() => setCameraPosition([0, -20, 0])} />
+      <OrbitControls />
     </Canvas>
   );
 };
