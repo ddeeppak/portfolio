@@ -69,7 +69,7 @@ const Name = () => {
       <RotatingIcosahedron />
       <TexturedMesh onClick={() => setCameraPosition([0, -20, 0])} />
       <CameraController targetPosition={cameraPosition} />
-      <OrbitControls />
+      // <OrbitControls />
     </Canvas>
   );
 };
