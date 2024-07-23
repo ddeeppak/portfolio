@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -44,18 +44,6 @@ const RotatingIcosahedron = () => {
   );
 };
 
-// const CameraController = ({ targetPosition }) => {
-//   const { camera } = useThree();
-
-//   useFrame(() => {
-//     // Smoothly transition the camera position
-//     camera.position.lerp(new THREE.Vector3(...targetPosition), 0.1);
-//     camera.updateProjectionMatrix();
-//   });
-
-//   return null;
-// };
-
 const Name = () => {
   const [cameraPosition, setCameraPosition] = useState([0, 20, 0]);
 
@@ -68,8 +56,7 @@ const Name = () => {
       <directionalLight color="red" position={[0, 0, 20]} shadow={true} />
       <RotatingIcosahedron />
       <TexturedMesh onClick={() => setCameraPosition([0, -20, 0])} />
-      // <CameraController targetPosition={cameraPosition} />
-      // <OrbitControls />
+      <OrbitControls />
     </Canvas>
   );
 };
