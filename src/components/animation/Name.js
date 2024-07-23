@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useTexture } from '@react-three/drei';
 
@@ -10,8 +10,8 @@ const TexturedMesh = () => {
         <cylinderGeometry args={[10, 8, 1, 50]} />
         <meshNormalMaterial />
       </mesh>
-      <mesh position={[0, 0, 0]}>
-        <circleGeometry args={[10, 100, 100]} />
+      <mesh position={[0, 0.51, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[10, 100]} />
         <meshBasicMaterial map={texture} />
       </mesh>
     </>
