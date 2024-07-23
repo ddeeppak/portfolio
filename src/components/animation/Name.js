@@ -44,17 +44,17 @@ const RotatingIcosahedron = () => {
   );
 };
 
-const CameraController = ({ targetPosition }) => {
-  const { camera } = useThree();
+// const CameraController = ({ targetPosition }) => {
+//   const { camera } = useThree();
 
-  useFrame(() => {
-    // Smoothly transition the camera position
-    camera.position.lerp(new THREE.Vector3(...targetPosition), 0.1);
-    camera.updateProjectionMatrix();
-  });
+//   useFrame(() => {
+//     // Smoothly transition the camera position
+//     camera.position.lerp(new THREE.Vector3(...targetPosition), 0.1);
+//     camera.updateProjectionMatrix();
+//   });
 
-  return null;
-};
+//   return null;
+// };
 
 const Name = () => {
   const [cameraPosition, setCameraPosition] = useState([0, 20, 0]);
@@ -68,7 +68,7 @@ const Name = () => {
       <directionalLight color="red" position={[0, 0, 20]} shadow={true} />
       <RotatingIcosahedron />
       <TexturedMesh onClick={() => setCameraPosition([0, -20, 0])} />
-      <CameraController targetPosition={cameraPosition} />
+      // <CameraController targetPosition={cameraPosition} />
       // <OrbitControls />
     </Canvas>
   );
