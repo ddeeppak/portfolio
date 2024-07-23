@@ -56,7 +56,7 @@ const Name = () => {
       <directionalLight color="red" position={[0, 0, 20]} shadow={true} />
       <RotatingIcosahedron />
       <TexturedMesh onClick={() => setCameraPosition([0, -20, 0])} />
-      <OrbitControls />
+      // <OrbitControls />
     </Canvas>
   );
 };
