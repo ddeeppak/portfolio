@@ -21,7 +21,7 @@ function App() {
         <div className="ProfileName">
           <p>Itachi Uchiha</p>
         </div>
-        <div className="Animation">Profiles </div>
+        <div className="Animation"></div>
         <div className="Skills">
           <Skills />
         </div>
