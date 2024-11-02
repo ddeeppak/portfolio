@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import './App.css';
-
 import Background from './components/animation/Background';
 import Name from './components/animation/Name';
 import Skills from './components/animation/Skills';
